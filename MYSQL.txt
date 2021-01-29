@@ -1,0 +1,18 @@
+msg.topic ="insert into `99999`.pm25(STID,Result) values('T202034',30.2);"
+return msg;
+
+
+msg.topic = "insert into `99999`.t202099(TEMP,HUM,PM10,PM2_5,TVOC,TEMP_COUNT,HUM_COUNT,PM10_COUNT) values(" + msg.TEMP + "," + msg.HUM + "," + msg.PM10 + "," + msg.PM2_5 + "," + msg.TVOC + "," + msg.TEMP_COUNT + "," + msg.HUM_COUNT + "," + msg.PM10_COUNT + ")";
+return msg;
+
+CREATE TABLE `99999`.`t202099` (
+  `Timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `TEMP` FLOAT NULL,
+  `HUM` FLOAT NULL,
+  `PM10` FLOAT NULL,
+  `PM2.5` FLOAT NULL,
+  `TVOC` FLOAT NULL,
+  `TEMP_COUNT` INT NULL,
+  `HUM_COUNT` INT NULL,
+  `PM10_COUNT` INT NULL,
+  PRIMARY KEY (`Timestamp`));
